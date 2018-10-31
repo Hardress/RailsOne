@@ -31,6 +31,3 @@ module RailsOne
     config.generators.system_tests = nil
   end
 end
-
-# config/application.rb
-config.assets.initialize_on_precompile = false
