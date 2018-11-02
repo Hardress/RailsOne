@@ -18,11 +18,13 @@
   </head>
 
   <body>
+    <div class="container">
       <ul class="nav nav-tabs">
         <li role="presentation" class ="dropdown"><%= link_to "Home", root_path %></li>
         <li role="presentation"><%= link_to "About", simple_pages_about_path %></li>
         <li role="presentation" ><%= link_to "Contact", simple_pages_contact_path %></li>
       </ul>
+    </div>
     </nav>
 
     <%= image_tag("bicycle.jpg", class: "img-responsive") %>
