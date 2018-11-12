@@ -4,12 +4,12 @@
     <% if product.image_url %>
       <%= image_tag(product.image_url, class: "img-thumbnail img-fluid") %>
     <% end %>
-  <h1><%= product.name %></h1>
+  <h2><%= product.name %></h2>
   <% end %>
 
-  <p><%= product.description %></p>
-  <p><%= product.colour %></p>
-  <strong><%= product.price %></strong>
+  <p><strong>Product Description: </strong><%= product.description %></p>
+  <p><strong>Color: </strong><%= product.colour %></p>
+  <p><strong>Price: </strong><%= product.price %></p>
   <%= link_to 'Show', product, class:"btn btn-primary" %>
   <%= link_to 'Edit', edit_product_path(product), class:"btn btn-info" %>
   <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %>
