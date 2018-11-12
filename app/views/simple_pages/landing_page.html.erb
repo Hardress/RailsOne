@@ -4,7 +4,6 @@
     <%= @featured_product.name %>
 
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-
       <div class="carousel-inner">
         <% @products.each do |product| %>
           <div class="carousel-item<%= " active" if product == @products.first %>">
