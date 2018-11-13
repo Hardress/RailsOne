@@ -18,6 +18,15 @@
         <li class="nav-item">
           <%= link_to "Products", products_url, class: "nav-link" %>
         </li>
+        
+        <div class="searchform">
+        <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+          <%= form.label :q, 'Search for:' %>
+          <%= form.text_field :q, id: 'q', value: params[:q] %>
+          <%= form.submit 'Search' %>
+        <% end %>
+        </div><!--end searchform-->
+
       </ul>
     </div>
   </nav>

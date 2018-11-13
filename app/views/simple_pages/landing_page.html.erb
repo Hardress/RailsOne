@@ -3,6 +3,9 @@
     <h2>Featured Product:</h2>
     <%= @featured_product.name %>
 
+    <%= params[:example_key].to_i * 10 %>
+
+
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <% @products.each do |product| %>
