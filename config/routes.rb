@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :users
   resources :products, :invoices, :orders, :users # 5.1 added ", :invoices, :orders, :users"
   resources :users, except: [:index]
@@ -8,9 +9,6 @@ Rails.application.routes.draw do
   get 'simple_pages/landing_page'
   post 'simple_pages/thank_you'
   root 'simple_pages#index'
-
-  devise_for :users
-  resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
 
