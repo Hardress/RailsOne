@@ -20,6 +20,8 @@
     <div class="container">
       <%= render 'shared/nav' %>
 
+      <%= flash[:notice] %>
+
       <%= yield %>
 
       <footer>
