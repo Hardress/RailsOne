@@ -16,6 +16,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
+  <div>
+    <% if alert %>
+      <p id="alert" class="alert alert-primary" role='alert'><%= alert %></p>
+    <% end %>
+    <% if notice %>
+      <p id="notice" class="alert alert-primary" role='alert'><%= notice %></p>
+    <% end %>
+  </div>
+
   <body>
     <div class="container">
       <%= render 'shared/nav' %>
