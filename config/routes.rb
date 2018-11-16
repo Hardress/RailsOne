@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   get 'simple_pages/landing_page'
   post 'simple_pages/thank_you'
   root 'simple_pages#index'
+
+  resources :products do # 5.8 added
+    resources :comments
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
 
