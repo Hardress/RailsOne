@@ -55,6 +55,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rails-controller-testing'
 
+gem 'brakeman'
+
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
