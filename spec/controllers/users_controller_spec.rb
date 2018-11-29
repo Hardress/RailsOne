@@ -1,13 +1,16 @@
 require 'rails_helper'
 
 describe UsersController, type: :controller do
-  let(:user) {User.create!(email:"test@test.com", password:"password", password_confirmation: "password" )}
+  
+  before do
+    @user = FactoryBot.create(:user)
+    @user2 = FactoryBot.create(:user)
+  end
 
   describe 'GET #show' do
     context 'when a user is logged in' do
-
       before do
-        sign_in user
+        sign_in @user
       end
 
       it "loads correct user details" do
