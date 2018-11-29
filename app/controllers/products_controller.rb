@@ -7,11 +7,13 @@ class ProductsController < ApplicationController
     if params[:q]
       search_term = params[:q]
       @products = Product.search(search_term)
+      logger.debug "My search found #{@products.count} products"
       if @products.nil?
         flash.now[:notice] = "Hey we don't have #{search_term}, check out our other products"
       end
     else
       @products = Product.all
+      logger.debug "My search found #{@products.count} products"
     end
   end
 
