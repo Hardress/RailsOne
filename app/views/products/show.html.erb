@@ -44,8 +44,15 @@
     <p>
       <%= number_to_currency(@product.price) %>
     </p>
+    <p>
+      <%= form_with(url: '/payments/create') do |form| %>
+      <%= render partial: "shared/stripe_checkout_button" %>
+    </p>
+<% end %>
   </div>
 </div>
+
+
 
 <div class="row">
   <div class="col-xs-12">
