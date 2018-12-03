@@ -16,3 +16,11 @@ $(document).on('turbolinks:load', function(){
     }
   });
 });
+
+$(document).on('turbolinks:load ajaxSuccess', function(){
+  refreshRating();
+  $('.img-zoom').elevateZoom({
+    constrainType:"height", constrainSize:274, zoomType: "lens", containLensZoom: true, gallery:'gallery_01', cursor: 'pointer', galleryActiveClass: "active"
+  });
+  $('.alert, .notice, .error').delay(3000).fadeOut()
+});
