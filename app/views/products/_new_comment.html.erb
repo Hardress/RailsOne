@@ -2,7 +2,7 @@
 <br>
   <div class="row">
     <h4>Add a review:</h4>
-      <%= form_for([@product, @product.comments.build]) do |f| %>
+      <%= form_for([@product, @product.comments.build], remote: true) do |f| %>
   </div> <!-- end row -->
 
   <div class="form-group row">
