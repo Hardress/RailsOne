@@ -58,6 +58,8 @@ gem 'rails-controller-testing'
 # 6.8 Installed Brakeman
 gem 'brakeman'
 
+# 6.11 added dalli
+gem 'dalli'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do

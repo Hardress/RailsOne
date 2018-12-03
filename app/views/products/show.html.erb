@@ -2,9 +2,11 @@
 
 <div class="row">
   <div class="col-xs-12">
+    <% cache @product do %>
     <p>
       <%= @product.name %>
     </p>
+    <% end %>
   </div> <!--end col-->
 </div> <!--end row-->
 
