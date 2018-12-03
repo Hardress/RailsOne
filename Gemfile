@@ -61,6 +61,9 @@ gem 'brakeman'
 # 6.11 added dalli
 gem 'dalli'
 
+# 6.12
+gem 'redis-rails'
+
 # Use sqlite3 as the database for Active Record
 group :development, :test do
   gem 'sqlite3'
