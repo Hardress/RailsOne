@@ -14,8 +14,14 @@ class PaymentsController < ApplicationController
         description: params[:stripeEmail]
       )
 
-    if charge.paid
-      Order.create(product_id: @product.id, user_id: @user.id, total: @product.price)
+      if charge.paid
+        Order.create(
+          product_id: @product.id,
+          user_id: @user.id,
+          total: @product.price
+        )
+        #flash[:success] = "You have successfully paid for your order!"
+        UserMailer.order_confirmation_email(@user, @product).deliver_now
     end
 
     rescue Stripe::CardError => e
@@ -24,6 +30,6 @@ class PaymentsController < ApplicationController
       err = body[:error]
       flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
     end
-    #redirect_to product_path(@product), notice: "Thank you for your purchase."
+    redirect_to product_path(@product), notice: "Thank you for your purchase."
   end
 end
