@@ -48,8 +48,8 @@
     </p>
     <p>
       <%= form_with(url: '/payments/create') do |form| %>
-      <%= render partial: "shared/stripe_checkout_button" %>
       <%= form.hidden_field :product_id, :value => @product.id %>
+      <%= render partial: "shared/stripe_checkout_button" %>
     </p>
 <% end %>
   </div>

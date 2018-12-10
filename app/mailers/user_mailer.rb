@@ -7,4 +7,9 @@ class UserMailer < ApplicationMailer
           to: 'your-email@example.com',
           subject: "A new contact form message from #{name}")
   end
+
+  def order_confirmation_email(arg1, arg2)
+    return true
+  end
+
 end
